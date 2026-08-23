@@ -1,40 +1,26 @@
 import { siteConfig } from "@/config/site";
 
-/**
- * Copys de WhatsApp: saludo corto, motivo claro y campos etiquetados con emoji
- * para que la persona vea de un vistazo qué completar antes de enviar.
- */
+/** Mensajes de WhatsApp: directos, breves y listos para completar. */
 export const WHATSAPP_INTENTS = {
-  general: `¡Hola ${siteConfig.name}! 👋
+  general: `🙋‍♂️ Hola, los encontré en la web, quisiera más información sobre ${siteConfig.domain}.
 
-Los encontré en ${siteConfig.domain} y quiero contarles lo que necesito 💬
+Mi nombre es:`,
+  computers: `🙋‍♂️ Hola, encontré Shiro Telecom en la web y necesito soporte para mi computadora o laptop.
 
-🙋 Mi nombre:
-🔧 Lo que necesito:
-📍 Dónde estoy:`,
-  computers: `¡Hola ${siteConfig.name}! 👋
+Mi nombre es:
+Problema:
+Mi ubicación:`,
+  cameras: `🙋‍♂️ Hola, encontré Shiro Telecom en la web y quisiera cotizar cámaras de seguridad.
 
-Mi computadora necesita ayuda 💻
+Mi nombre es:
+Mi ubicación:
+Cantidad aproximada de cámaras:`,
+  business: `🙋‍♂️ Hola, encontré Shiro Telecom en la web y necesito una solución tecnológica para mi empresa.
 
-🙋 Mi nombre:
-⚠️ Qué le pasa:
-📍 Dónde estoy:`,
-  cameras: `¡Hola ${siteConfig.name}! 👋
-
-Quiero cotizar cámaras de seguridad 📹
-
-🙋 Mi nombre:
-🏠 Qué quiero cubrir (casa, local, almacén):
-🔢 Cuántas cámaras calculo:
-📍 Dónde estoy:`,
-  business: `¡Hola ${siteConfig.name}! 👋
-
-Escribo por una necesidad tecnológica de mi empresa 🏢
-
-🙋 Mi nombre:
-🏷️ Empresa:
-🎯 Qué necesitamos:
-📍 Dónde estamos:`,
+Mi nombre es:
+Empresa:
+Necesidad:
+Ubicación:`,
 } as const;
 
 export type WhatsAppIntent = keyof typeof WHATSAPP_INTENTS | "product";
@@ -48,16 +34,10 @@ export type WhatsAppUrlOptions = {
 export function buildProductWhatsAppMessage(productName: string): string {
   const safeProductName = productName.trim() || "Producto por confirmar";
 
-  return `¡Hola ${siteConfig.name}! 👋
+  return `🙋‍♂️ Hola, encontré este producto en la web de Shiro Telecom y quisiera información sobre su disponibilidad.
 
-Vi este producto en ${siteConfig.domain} y quiero más información 🛒
-
-📦 ${safeProductName}
-
-¿Me confirman disponibilidad y precio? 🙏
-
-🙋 Mi nombre:
-📍 Dónde estoy:`;
+Producto: ${safeProductName}
+Mi nombre es:`;
 }
 
 export const whatsappMessages = {
