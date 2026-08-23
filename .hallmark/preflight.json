@@ -1,0 +1,8 @@
+{
+  "date": "2026-08-22",
+  "fontStack": "Space Grotesk + Inter via next/font",
+  "palette": "custom OKLCH tokens based on approved Shiro colors",
+  "motion": "CSS only, motion-cut",
+  "spacing": "4px semantic scale",
+  "framework": "Next.js 16 App Router with Tailwind CSS 4"
+}

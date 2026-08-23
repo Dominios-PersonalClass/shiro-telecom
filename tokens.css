@@ -1,0 +1,66 @@
+/* Hallmark · macrostructure: Split Studio · H2 knobs: ratio=7/5, proof=network-diagram, divider=negative-space
+ * theme: custom · vibe: "corporate precision, connected fieldwork" · paper: oklch(98.5% 0.006 295) · accent: oklch(33% 0.19 303)
+ * display: Space Grotesk · body: Inter · axes: light / geometric-sans / cool
+ * studied: no · context: user-provided · v1.1.0
+ * Hallmark · pre-emit critique: P5 H5 E4 S5 R5 V4
+ */
+
+:root {
+  --color-brand-white: oklch(100% 0 0);
+  --color-brand-purple: oklch(33% 0.19 303);
+  --color-brand-purple-strong: oklch(26% 0.16 303);
+  --color-brand-purple-soft: oklch(94% 0.035 303);
+  --color-brand-mint: oklch(87% 0.24 151);
+  --color-brand-mint-soft: oklch(94% 0.08 151);
+  --color-brand-night: oklch(22% 0.018 285);
+  --color-paper: oklch(98.5% 0.006 295);
+  --color-paper-2: oklch(96% 0.012 295);
+  --color-paper-3: oklch(92% 0.018 295);
+  --color-ink: oklch(22% 0.018 285);
+  --color-ink-2: oklch(43% 0.024 290);
+  --color-muted: oklch(55% 0.018 292);
+  --color-rule: oklch(84% 0.018 295);
+  --color-rule-2: oklch(90% 0.012 295);
+  --color-focus: oklch(54% 0.22 303);
+  --color-success: oklch(58% 0.16 151);
+  --color-danger: oklch(56% 0.18 28);
+
+  --font-display: var(--font-space-grotesk), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+  --space-4xl: 7rem;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: clamp(1.25rem, 2vw, 1.5rem);
+  --text-2xl: clamp(1.75rem, 3vw, 2.5rem);
+  --text-3xl: clamp(2.25rem, 5vw, 4rem);
+  --text-display-s: clamp(2.75rem, 7vw, 5.75rem);
+  --text-display: clamp(3.25rem, 8vw, 7rem);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-short: 140ms;
+  --dur-medium: 240ms;
+  --dur-long: 420ms;
+
+  --rule-hair: 1px;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-pill: 999px;
+
+  --page-max: 80rem;
+  --page-gutter: clamp(1rem, 4vw, 2.5rem);
+}
