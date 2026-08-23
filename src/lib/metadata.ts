@@ -102,13 +102,46 @@ export const defaultMetadata: Metadata = {
   },
 };
 
+export const organizationJsonLd = {
+  "@type": "Organization",
+  "@id": `${siteConfig.url}/#organization`,
+  name: siteConfig.name,
+  alternateName: "Shiro Telecom",
+  url: siteConfig.url,
+  logo: absoluteUrl(siteConfig.brand.mark),
+  image: absoluteUrl(siteConfig.brand.mark),
+  description: siteConfig.description,
+  telephone: siteConfig.phone.international,
+  email: siteConfig.email.address,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: siteConfig.address.street,
+    addressLocality: siteConfig.address.locality,
+    addressRegion: siteConfig.address.region,
+    addressCountry: siteConfig.address.countryCode,
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Perú",
+  },
+  sameAs: [siteConfig.social.tiktok],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: siteConfig.phone.international,
+    contactType: "customer service",
+    areaServed: "PE",
+    availableLanguage: "Spanish",
+  },
+} as const;
+
 export const localBusinessJsonLd = {
-  "@context": "https://schema.org",
   "@type": ["LocalBusiness", "ProfessionalService"],
   "@id": `${siteConfig.url}/#business`,
+  parentOrganization: { "@id": `${siteConfig.url}/#organization` },
   name: siteConfig.name,
   url: siteConfig.url,
   logo: absoluteUrl(siteConfig.brand.mark),
+  image: absoluteUrl(siteConfig.brand.mark),
   description: siteConfig.description,
   telephone: siteConfig.phone.international,
   email: siteConfig.email.address,
@@ -134,7 +167,6 @@ export const localBusinessJsonLd = {
         "https://schema.org/Thursday",
         "https://schema.org/Friday",
         "https://schema.org/Saturday",
-        "https://schema.org/Sunday",
       ],
       opens: siteConfig.schedule.opens,
       closes: siteConfig.schedule.closes,
@@ -154,4 +186,19 @@ export const localBusinessJsonLd = {
     "Control de acceso",
     "Soluciones tecnológicas empresariales",
   ],
+} as const;
+
+export const websiteJsonLd = {
+  "@type": "WebSite",
+  "@id": `${siteConfig.url}/#website`,
+  url: siteConfig.url,
+  name: siteConfig.name,
+  description: siteConfig.description,
+  inLanguage: siteConfig.language,
+  publisher: { "@id": `${siteConfig.url}/#organization` },
+} as const;
+
+export const siteStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [organizationJsonLd, localBusinessJsonLd, websiteJsonLd],
 } as const;

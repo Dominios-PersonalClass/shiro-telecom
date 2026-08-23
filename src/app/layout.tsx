@@ -2,7 +2,7 @@ import type { Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 
 import { Footer, Header, WhatsAppButton } from "@/components";
-import { defaultMetadata, localBusinessJsonLd } from "@/lib/metadata";
+import { defaultMetadata, siteStructuredData } from "@/lib/metadata";
 
 import "./globals.css";
 
@@ -31,7 +31,7 @@ export const viewport: Viewport = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  const structuredData = JSON.stringify(localBusinessJsonLd).replace(/</g, "\\u003c");
+  const structuredData = JSON.stringify(siteStructuredData).replace(/</g, "\\u003c");
 
   return (
     <html lang="es-PE" className={`${spaceGrotesk.variable} ${inter.variable}`}>
