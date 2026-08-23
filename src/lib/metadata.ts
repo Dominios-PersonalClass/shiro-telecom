@@ -167,6 +167,7 @@ export const localBusinessJsonLd = {
         "https://schema.org/Thursday",
         "https://schema.org/Friday",
         "https://schema.org/Saturday",
+        "https://schema.org/Sunday",
       ],
       opens: siteConfig.schedule.opens,
       closes: siteConfig.schedule.closes,

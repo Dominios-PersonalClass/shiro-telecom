@@ -48,11 +48,11 @@ export const siteConfig = {
     "Proyecto empresarial",
   ],
   schedule: {
-    days: "Lunes a sábado",
-    hours: "8:00 a. m. a 8:00 p. m.",
-    display: "Lunes a sábado, 8:00 a. m. a 8:00 p. m.",
-    opens: "08:00",
-    closes: "20:00",
+    days: "Todos los días",
+    hours: "24 horas",
+    display: "24 horas al día, los 7 días de la semana",
+    opens: "00:00",
+    closes: "23:59",
   },
   navigation: [
     { label: "Inicio", href: "/" },
